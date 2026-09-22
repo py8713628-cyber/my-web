@@ -1,15 +1,146 @@
-# Auto detect text files and perform LF normalization
-* text=auto
-Create a complete single-file HTML website (index.html) for a simple location-sharing page.
+Create a premium romantic cinematic single-page website for GitHub Pages using HTML, CSS and JavaScript.
 
-Requirements:
-- Mobile-friendly and responsive.
-- Clean, professional design.
-- Show a clear button: "Share My Location".
-- When the user taps the button, request browser geolocation permission using the standard Geolocation API.
-- Do NOT bypass, hide, or trick the browser's location permission.
-- After the user grants permission, display the latitude and longitude on the page.
-- Also create a Google Maps link using the obtained coordinates so the user can open their location on Google Maps.
-- Show a clear message if permission is denied or location is unavailable.
-- No server, database, tracking, or hidden background location collection.
-- Everything must work from a normal H…
+IMPORTANT:
+I will provide/upload a personal photo named "photo.jpg".
+USE THIS PHOTO prominently in the website. Do not replace it with a random person or AI-generated face. Preserve the person's face and appearance exactly as in the uploaded photo.
+
+OVERALL LOOK:
+Create a magical romantic night scene with a deep navy/black sky, glowing stars, moon, mountains, lake reflection, soft clouds, warm lanterns, red roses, floating hearts and a large glowing neon-red heart.
+
+OPENING SCREEN:
+When the website opens, show a cinematic dark screen with tiny glowing stars and floating heart particles.
+
+At the top, reveal:
+
+"WELCOME ❤️"
+
+Use elegant premium handwritten/calligraphy typography with a golden-white glow.
+
+Under it display:
+
+"This is not just a page..."
+"It's a little piece of my heart ❤️"
+
+MAIN PHOTO:
+Place my uploaded "photo.jpg" inside a large elegant glowing heart-shaped frame.
+
+The photo should be the main visual focus.
+
+Add:
+- Neon red/pink heart border around the photo
+- Soft golden glow behind the photo
+- Glassmorphism frame
+- Subtle floating particles around it
+- Slow heartbeat/pulse animation
+- Gentle zoom-in effect
+- Soft reflection underneath
+- Small floating ❤️ emojis around the frame
+
+Do NOT distort the face.
+Do NOT stretch the image.
+Use object-fit: cover while keeping the face naturally visible.
+
+PHOTO REVEAL:
+After "WELCOME ❤️" appears, reveal the photo slowly with a cinematic fade + zoom animation.
+
+Then reveal:
+
+"PRADEEP"
+
+Use huge premium brush/calligraphy letters with red, white and golden glow.
+
+Add a small animated crown 👑 above PRADEEP and a heartbeat line ❤️ around the name.
+
+SHAYARI SECTION:
+Below the photo, create 10 beautiful glassmorphism shayari cards.
+
+Each card should appear one-by-one with smooth animation and contain a glowing red heart ❤️.
+
+Use exactly:
+
+1. "Tumhare bina zindagi adhoori si lagti hai,
+   par tumhari yaadein har pal saath rehti hai. ❤️"
+
+2. "Kuch log sapne hote hain,
+   aur tum un sapno se bhi khoobsurat ho. ❤️"
+
+3. "Dil se chaha hai tumhe,
+   aur har dua mein tumhara naam hai. ❤️"
+
+4. "Dooriyan chahe kitni bhi ho,
+   tum mere dil ke sabse kareeb ho. ❤️"
+
+5. "Teri muskaan hi meri khushi hai,
+   aur tera sochna hi meri aadat. ❤️"
+
+6. "Zindagi mein kuch log sirf milte nahi,
+   zindagi ban jaate hain. ❤️"
+
+7. "Tumse baat karna bhi ek sukoon hai,
+   jaise thak kar mann ko ghar mil gaya ho. ❤️"
+
+8. "Na jaane kaisi ho tum,
+   par har roop mein bahut khaas ho. ❤️"
+
+9. "Agar pyaar ek ehsaas hai,
+   to tum us ehsaas ka sabse khoobsurat hissa ho. ❤️"
+
+10. "Bas itna hi kehna hai...
+    Tum ho, to sab kuch hai. ❤️"
+
+BACKGROUND:
+Create a cinematic moonlit lake scene behind the content.
+
+Include:
+- Large glowing moon
+- Mountain silhouettes
+- Moon reflection in water
+- Red glowing heart outline
+- Warm lanterns
+- Red roses and scattered petals
+- Tiny stars
+- Floating glowing particles
+
+INTERACTION:
+Add an "Open My Heart ❤️" button at the beginning.
+
+When clicked:
+- Start the cinematic animation
+- Reveal the photo
+- Reveal PRADEEP
+- Start shayari animations
+- Enable background music only after the click
+
+Do NOT autoplay music before user interaction.
+
+Add mouse/touch parallax effects on desktop/mobile.
+
+Clicking the screen should create a small heart particle burst.
+
+FINAL SECTION:
+At the bottom display:
+
+"PRADEEP ❤️"
+
+"Some feelings are better felt than explained..."
+
+"Dream • Study • Succeed"
+
+Make the final section emotional, elegant and cinematic.
+
+TECHNICAL:
+- HTML + CSS + JavaScript only
+- GitHub Pages ready
+- Responsive on mobile, tablet and desktop
+- Use photo.jpg from the project folder
+- No face distortion
+- Smooth 60fps animations
+- No console errors
+- Clean professional code
+- Separate index.html, style.css and script.js
+- Use CSS animations and JavaScript for effects
+- Make the final result look like a premium romantic surprise website, not a basic HTML template.
+
+MOST IMPORTANT:
+The uploaded personal photo must remain the emotional centerpiece of the website.
+The final experience should feel like opening a beautiful digital love letter at midnight. ❤️
