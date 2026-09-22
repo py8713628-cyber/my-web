@@ -1,2 +1,15 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+Create a complete single-file HTML website (index.html) for a simple location-sharing page.
+
+Requirements:
+- Mobile-friendly and responsive.
+- Clean, professional design.
+- Show a clear button: "Share My Location".
+- When the user taps the button, request browser geolocation permission using the standard Geolocation API.
+- Do NOT bypass, hide, or trick the browser's location permission.
+- After the user grants permission, display the latitude and longitude on the page.
+- Also create a Google Maps link using the obtained coordinates so the user can open their location on Google Maps.
+- Show a clear message if permission is denied or location is unavailable.
+- No server, database, tracking, or hidden background location collection.
+- Everything must work from a normal H…
