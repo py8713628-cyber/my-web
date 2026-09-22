@@ -1,146 +1,517 @@
-Create a premium romantic cinematic single-page website for GitHub Pages using HTML, CSS and JavaScript.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-IMPORTANT:
-I will provide/upload a personal photo named "photo.jpg".
-USE THIS PHOTO prominently in the website. Do not replace it with a random person or AI-generated face. Preserve the person's face and appearance exactly as in the uploaded photo.
+<title>Pradeep ❤️</title>
 
-OVERALL LOOK:
-Create a magical romantic night scene with a deep navy/black sky, glowing stars, moon, mountains, lake reflection, soft clouds, warm lanterns, red roses, floating hearts and a large glowing neon-red heart.
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
-OPENING SCREEN:
-When the website opens, show a cinematic dark screen with tiny glowing stars and floating heart particles.
+html{
+    scroll-behavior:smooth;
+}
 
-At the top, reveal:
+body{
+    min-height:100vh;
+    background:
+        radial-gradient(circle at 50% 20%, #35112f 0%, transparent 35%),
+        radial-gradient(circle at 20% 80%, #170b25 0%, transparent 40%),
+        linear-gradient(135deg,#03030b,#090414,#020208);
+    color:white;
+    font-family:Georgia,serif;
+    overflow-x:hidden;
+}
 
-"WELCOME ❤️"
+/* STARS */
+.stars{
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    z-index:0;
+}
 
-Use elegant premium handwritten/calligraphy typography with a golden-white glow.
+.star{
+    position:absolute;
+    width:3px;
+    height:3px;
+    background:white;
+    border-radius:50%;
+    opacity:.8;
+    animation:twinkle 2s infinite alternate;
+}
 
-Under it display:
+.star:nth-child(1){top:8%;left:12%}
+.star:nth-child(2){top:18%;left:75%}
+.star:nth-child(3){top:30%;left:25%}
+.star:nth-child(4){top:12%;left:55%}
+.star:nth-child(5){top:45%;left:88%}
+.star:nth-child(6){top:65%;left:8%}
+.star:nth-child(7){top:72%;left:70%}
+.star:nth-child(8){top:82%;left:35%}
+.star:nth-child(9){top:55%;left:48%}
+.star:nth-child(10){top:25%;left:92%}
 
-"This is not just a page..."
-"It's a little piece of my heart ❤️"
+@keyframes twinkle{
+    from{opacity:.2;transform:scale(.7)}
+    to{opacity:1;transform:scale(1.4)}
+}
 
-MAIN PHOTO:
-Place my uploaded "photo.jpg" inside a large elegant glowing heart-shaped frame.
+/* FLOATING HEARTS */
+.hearts{
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    overflow:hidden;
+    z-index:1;
+}
 
-The photo should be the main visual focus.
+.heart{
+    position:absolute;
+    bottom:-50px;
+    color:#ff315d;
+    font-size:22px;
+    animation:floatUp linear infinite;
+    opacity:.7;
+}
 
-Add:
-- Neon red/pink heart border around the photo
-- Soft golden glow behind the photo
-- Glassmorphism frame
-- Subtle floating particles around it
-- Slow heartbeat/pulse animation
-- Gentle zoom-in effect
-- Soft reflection underneath
-- Small floating ❤️ emojis around the frame
+.heart:nth-child(1){left:8%;animation-duration:9s}
+.heart:nth-child(2){left:25%;animation-duration:12s;animation-delay:2s}
+.heart:nth-child(3){left:48%;animation-duration:10s;animation-delay:4s}
+.heart:nth-child(4){left:68%;animation-duration:13s;animation-delay:1s}
+.heart:nth-child(5){left:88%;animation-duration:11s;animation-delay:3s}
 
-Do NOT distort the face.
-Do NOT stretch the image.
-Use object-fit: cover while keeping the face naturally visible.
+@keyframes floatUp{
+    0%{
+        transform:translateY(0) scale(.7) rotate(0);
+        opacity:0;
+    }
+    15%{opacity:.8}
+    100%{
+        transform:translateY(-110vh) scale(1.5) rotate(25deg);
+        opacity:0;
+    }
+}
 
-PHOTO REVEAL:
-After "WELCOME ❤️" appears, reveal the photo slowly with a cinematic fade + zoom animation.
+/* OPENING */
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:30px 20px;
+    position:relative;
+    z-index:2;
+}
 
-Then reveal:
+.hero-box{
+    max-width:700px;
+    animation:fadeIn 2s ease;
+}
 
-"PRADEEP"
+.small{
+    letter-spacing:5px;
+    color:#e9c6d1;
+    font-size:13px;
+    margin-bottom:20px;
+}
 
-Use huge premium brush/calligraphy letters with red, white and golden glow.
+h1{
+    font-size:clamp(48px,12vw,100px);
+    font-weight:normal;
+    color:#fff;
+    text-shadow:
+        0 0 10px #ff315d,
+        0 0 30px #ff315d,
+        0 0 60px #8e1635;
+}
 
-Add a small animated crown 👑 above PRADEEP and a heartbeat line ❤️ around the name.
+.subtitle{
+    margin-top:18px;
+    font-size:20px;
+    color:#e7d8df;
+    font-style:italic;
+}
 
-SHAYARI SECTION:
-Below the photo, create 10 beautiful glassmorphism shayari cards.
+.enter{
+    display:inline-block;
+    margin-top:40px;
+    padding:14px 32px;
+    border:1px solid rgba(255,255,255,.35);
+    border-radius:50px;
+    color:white;
+    text-decoration:none;
+    background:rgba(255,255,255,.07);
+    backdrop-filter:blur(10px);
+    transition:.3s;
+}
 
-Each card should appear one-by-one with smooth animation and contain a glowing red heart ❤️.
+.enter:hover{
+    transform:scale(1.08);
+    background:rgba(255,50,90,.2);
+    box-shadow:0 0 30px rgba(255,40,90,.4);
+}
 
-Use exactly:
+/* MAIN */
+.main{
+    position:relative;
+    z-index:2;
+    padding:80px 20px;
+    max-width:1000px;
+    margin:auto;
+}
 
-1. "Tumhare bina zindagi adhoori si lagti hai,
-   par tumhari yaadein har pal saath rehti hai. ❤️"
+/* PHOTO */
+.photo-section{
+    text-align:center;
+    margin-bottom:100px;
+}
 
-2. "Kuch log sapne hote hain,
-   aur tum un sapno se bhi khoobsurat ho. ❤️"
+.photo-frame{
+    width:min(90vw,430px);
+    aspect-ratio:4/5;
+    margin:35px auto;
+    padding:9px;
+    border-radius:35px;
+    background:linear-gradient(135deg,#ff315d,#ffd2dc,#ff315d);
+    box-shadow:
+        0 0 25px rgba(255,40,90,.5),
+        0 0 80px rgba(255,20,80,.2);
+    animation:heartbeat 3s infinite ease-in-out;
+}
 
-3. "Dil se chaha hai tumhe,
-   aur har dua mein tumhara naam hai. ❤️"
+.placeholder{
+    width:100%;
+    height:100%;
+    border-radius:27px;
+    background:
+        radial-gradient(circle at 50% 35%,#f3c5bd 0 9%,transparent 10%),
+        radial-gradient(ellipse at 50% 60%,#19141c 0 20%,transparent 21%),
+        linear-gradient(145deg,#35132c,#09070d);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+    overflow:hidden;
+    position:relative;
+}
 
-4. "Dooriyan chahe kitni bhi ho,
-   tum mere dil ke sabse kareeb ho. ❤️"
+.placeholder::before{
+    content:"";
+    width:110px;
+    height:110px;
+    border-radius:50%;
+    background:#e6b4ac;
+    position:absolute;
+    top:25%;
+}
 
-5. "Teri muskaan hi meri khushi hai,
-   aur tera sochna hi meri aadat. ❤️"
+.placeholder::after{
+    content:"";
+    width:240px;
+    height:230px;
+    border-radius:50% 50% 10% 10%;
+    background:linear-gradient(135deg,#111,#33203a);
+    position:absolute;
+    bottom:-45px;
+}
 
-6. "Zindagi mein kuch log sirf milte nahi,
-   zindagi ban jaate hain. ❤️"
+.placeholder-text{
+    position:relative;
+    z-index:3;
+    margin-top:280px;
+    font-size:14px;
+    letter-spacing:3px;
+    color:#ffd9e1;
+}
 
-7. "Tumse baat karna bhi ek sukoon hai,
-   jaise thak kar mann ko ghar mil gaya ho. ❤️"
+@keyframes heartbeat{
+    0%,100%{transform:scale(1)}
+    50%{transform:scale(1.015)}
+}
 
-8. "Na jaane kaisi ho tum,
-   par har roop mein bahut khaas ho. ❤️"
+/* NAME */
+.name{
+    font-size:clamp(45px,10vw,90px);
+    letter-spacing:8px;
+    color:#fff;
+    text-shadow:
+        0 0 10px #ff315d,
+        0 0 35px #ff315d;
+}
 
-9. "Agar pyaar ek ehsaas hai,
-   to tum us ehsaas ka sabse khoobsurat hissa ho. ❤️"
+.crown{
+    font-size:25px;
+    display:block;
+    margin-bottom:10px;
+}
 
-10. "Bas itna hi kehna hai...
-    Tum ho, to sab kuch hai. ❤️"
+.line{
+    width:100px;
+    height:2px;
+    margin:25px auto;
+    background:linear-gradient(90deg,transparent,#ff315d,transparent);
+}
 
-BACKGROUND:
-Create a cinematic moonlit lake scene behind the content.
+/* SHAYARI */
+.section-title{
+    text-align:center;
+    font-size:32px;
+    font-weight:normal;
+    margin-bottom:40px;
+    color:#ffe5eb;
+}
 
-Include:
-- Large glowing moon
-- Mountain silhouettes
-- Moon reflection in water
-- Red glowing heart outline
-- Warm lanterns
-- Red roses and scattered petals
-- Tiny stars
-- Floating glowing particles
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:20px;
+}
 
-INTERACTION:
-Add an "Open My Heart ❤️" button at the beginning.
+.card{
+    padding:28px 22px;
+    min-height:150px;
+    border:1px solid rgba(255,255,255,.13);
+    border-radius:22px;
+    background:rgba(255,255,255,.055);
+    backdrop-filter:blur(14px);
+    box-shadow:0 10px 35px rgba(0,0,0,.3);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    line-height:1.8;
+    color:#eadde2;
+    transition:.4s;
+}
 
-When clicked:
-- Start the cinematic animation
-- Reveal the photo
-- Reveal PRADEEP
-- Start shayari animations
-- Enable background music only after the click
+.card:hover{
+    transform:translateY(-8px);
+    border-color:rgba(255,70,110,.5);
+    box-shadow:0 0 30px rgba(255,30,80,.18);
+}
 
-Do NOT autoplay music before user interaction.
+.card span{
+    color:#ff426b;
+    font-size:22px;
+}
 
-Add mouse/touch parallax effects on desktop/mobile.
+/* FOOTER */
+footer{
+    text-align:center;
+    padding:80px 20px 40px;
+    color:#998d94;
+    font-size:13px;
+    letter-spacing:2px;
+}
 
-Clicking the screen should create a small heart particle burst.
+.footer-heart{
+    color:#ff315d;
+    font-size:22px;
+}
 
-FINAL SECTION:
-At the bottom display:
+/* ANIMATION */
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(25px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
 
-"PRADEEP ❤️"
+/* MOBILE */
+@media(max-width:600px){
+    .main{
+        padding-top:50px;
+    }
 
-"Some feelings are better felt than explained..."
+    .subtitle{
+        font-size:17px;
+    }
 
-"Dream • Study • Succeed"
+    .cards{
+        grid-template-columns:1fr;
+    }
 
-Make the final section emotional, elegant and cinematic.
+    .photo-frame{
+        width:88vw;
+    }
+}
+</style>
+</head>
 
-TECHNICAL:
-- HTML + CSS + JavaScript only
-- GitHub Pages ready
-- Responsive on mobile, tablet and desktop
-- Use photo.jpg from the project folder
-- No face distortion
-- Smooth 60fps animations
-- No console errors
-- Clean professional code
-- Separate index.html, style.css and script.js
-- Use CSS animations and JavaScript for effects
-- Make the final result look like a premium romantic surprise website, not a basic HTML template.
+<body>
 
-MOST IMPORTANT:
-The uploaded personal photo must remain the emotional centerpiece of the website.
-The final experience should feel like opening a beautiful digital love letter at midnight. ❤️
+<!-- STARS -->
+<div class="stars">
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+</div>
+
+<!-- FLOATING HEARTS -->
+<div class="hearts">
+    <div class="heart">♥</div>
+    <div class="heart">♥</div>
+    <div class="heart">♥</div>
+    <div class="heart">♥</div>
+    <div class="heart">♥</div>
+</div>
+
+<!-- OPENING -->
+<section class="hero">
+
+    <div class="hero-box">
+
+        <div class="small">A LITTLE PIECE OF MY HEART</div>
+
+        <h1>WELCOME ❤️</h1>
+
+        <p class="subtitle">
+            This is not just a page...<br>
+            It's a little piece of my heart.
+        </p>
+
+        <a href="#main" class="enter">
+            Enter My World ♥
+        </a>
+
+    </div>
+
+</section>
+
+<!-- MAIN -->
+<main class="main" id="main">
+
+    <!-- PHOTO -->
+    <section class="photo-section">
+
+        <div class="small">A MOMENT TO REMEMBER</div>
+
+        <div class="photo-frame">
+
+            <div class="placeholder">
+
+                <div class="placeholder-text">
+                    YOUR PHOTO HERE ❤️
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="crown">♛</div>
+
+        <div class="name">PRADEEP</div>
+
+        <div class="line"></div>
+
+        <p class="subtitle">
+            Some moments become memories,<br>
+            and some memories become forever.
+        </p>
+
+    </section>
+
+
+    <!-- SHAYARI -->
+    <section>
+
+        <h2 class="section-title">
+            ✦ Dil Se Likhi Kuch Baatein ✦
+        </h2>
+
+        <div class="cards">
+
+            <div class="card">
+                Tumhare bina zindagi adhoori si lagti hai,
+                par tumhari yaadein har pal saath rehti hain. 
+                <span>♥</span>
+            </div>
+
+            <div class="card">
+                Kuch log sapne hote hain,
+                aur tum un sapno se bhi khoobsurat ho.
+                <span>♥</span>
+            </div>
+
+            <div class="card">
+                Dil se chaha hai tumhe,
+                aur har dua mein tumhara naam hai.
+                <span>♥</span>
+            </div>
+
+            <div class="card">
+                Dooriyan chahe kitni bhi ho,
+                tum mere dil ke sabse kareeb ho.
+                <span>♥</span>
+            </div>
+
+            <div class="card">
+                Teri muskaan hi meri khushi hai,
+                aur tera sochna hi meri aadat.
+                <span>♥</span>
+            </div>
+
+            <div class="card">
+                Zindagi mein kuch log sirf milte nahi,
+                zindagi ban jaate hain.
+                <span>♥</span>
+            </div>
+
+            <div class="card">
+                Tumse baat karna bhi ek sukoon hai,
+                jaise thak kar mann ko ghar mil gaya ho.
+                <span>♥</span>
+            </div>
+
+            <div class="card">
+                Na jaane kaisi ho tum,
+                par har roop mein bahut khaas ho.
+                <span>♥</span>
+            </div>
+
+            <div class="card">
+                Agar pyaar ek ehsaas hai,
+                to tum us ehsaas ka sabse khoobsurat hissa ho.
+                <span>♥</span>
+            </div>
+
+            <div class="card">
+                Bas itna hi kehna hai...
+                tum ho to sab kuch thoda aur khoobsurat lagta hai.
+                <span>♥</span>
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+<footer>
+
+    Made with <span class="footer-heart">♥</span><br><br>
+
+    PRADEEP
+
+</footer>
+
+</body>
+</html>
