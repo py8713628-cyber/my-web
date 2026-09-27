@@ -1,16 +1,18 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Pradeep ❤️</title>
+<title>Pradeep | My Journey</title>
 
 <style>
 *{
-    📁 Your Repository
-   ├── index.html
-   └── 1000021023.png
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
 }
 
 html{
@@ -18,500 +20,84 @@ html{
 }
 
 body{
-    min-height:100vh;
-    background:
-        radial-gradient(circle at 50% 20%, #35112f 0%, transparent 35%),
-        radial-gradient(circle at 20% 80%, #170b25 0%, transparent 40%),
-        linear-gradient(135deg,#03030b,#090414,#020208);
+    background:#000;
     color:white;
-    font-family:Georgia,serif;
     overflow-x:hidden;
 }
 
-/* STARS */
-.stars{
-    position:fixed;
-    inset:0;
-    pointer-events:none;
-    z-index:0;
-}
+/* ================= HERO ================= */
 
-.star{
-    position:absolute;
-    width:3px;
-    height:3px;
-    background:white;
-    border-radius:50%;
-    opacity:.8;
-    animation:twinkle 2s infinite alternate;
-}
-
-.star:nth-child(1){top:8%;left:12%}
-.star:nth-child(2){top:18%;left:75%}
-.star:nth-child(3){top:30%;left:25%}
-.star:nth-child(4){top:12%;left:55%}
-.star:nth-child(5){top:45%;left:88%}
-.star:nth-child(6){top:65%;left:8%}
-.star:nth-child(7){top:72%;left:70%}
-.star:nth-child(8){top:82%;left:35%}
-.star:nth-child(9){top:55%;left:48%}
-.star:nth-child(10){top:25%;left:92%}
-
-@keyframes twinkle{
-    from{opacity:.2;transform:scale(.7)}
-    to{opacity:1;transform:scale(1.4)}
-}
-
-/* FLOATING HEARTS */
-.hearts{
-    position:fixed;
-    inset:0;
-    pointer-events:none;
-    overflow:hidden;
-    z-index:1;
-}
-
-.heart{
-    position:absolute;
-    bottom:-50px;
-    color:#ff315d;
-    font-size:22px;
-    animation:floatUp linear infinite;
-    opacity:.7;
-}
-
-.heart:nth-child(1){left:8%;animation-duration:9s}
-.heart:nth-child(2){left:25%;animation-duration:12s;animation-delay:2s}
-.heart:nth-child(3){left:48%;animation-duration:10s;animation-delay:4s}
-.heart:nth-child(4){left:68%;animation-duration:13s;animation-delay:1s}
-.heart:nth-child(5){left:88%;animation-duration:11s;animation-delay:3s}
-
-@keyframes floatUp{
-    0%{
-        transform:translateY(0) scale(.7) rotate(0);
-        opacity:0;
-    }
-    15%{opacity:.8}
-    100%{
-        transform:translateY(-110vh) scale(1.5) rotate(25deg);
-        opacity:0;
-    }
-}
-
-/* OPENING */
 .hero{
-    min-height:100vh;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    padding:30px 20px;
+    height:100vh;
     position:relative;
-    z-index:2;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    overflow:hidden;
+
+    background:
+    linear-gradient(rgba(0,0,0,.35),rgba(0,0,0,.75)),
+    url("https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=2000&q=90");
+
+    background-size:cover;
+    background-position:center;
 }
 
-.hero-box{
-    max-width:700px;
-    animation:fadeIn 2s ease;
+.overlay{
+    position:absolute;
+    inset:0;
+    background:radial-gradient(circle,transparent 20%,rgba(0,0,0,.75));
+}
+
+/* LIGHT GLOW */
+
+.light{
+    position:absolute;
+    width:170px;
+    height:170px;
+    border-radius:50%;
+    background:rgba(255,255,255,.8);
+    filter:blur(60px);
+    opacity:.25;
+    animation:blink 1.5s infinite alternate;
+}
+
+.light.left{
+    left:18%;
+    bottom:22%;
+}
+
+.light.right{
+    right:18%;
+    bottom:22%;
+}
+
+@keyframes blink{
+    from{
+        opacity:.15;
+        transform:scale(.8);
+    }
+    to{
+        opacity:.8;
+        transform:scale(1.3);
+    }
+}
+
+/* HERO TEXT */
+
+.hero-content{
+    position:relative;
+    z-index:5;
 }
 
 .small{
-    letter-spacing:5px;
-    color:#e9c6d1;
-    font-size:13px;
-    margin-bottom:20px;
+    letter-spacing:7px;
+    font-size:15px;
+    opacity:.8;
+    animation:fade 2s ease;
 }
 
 h1{
-    font-size:clamp(48px,12vw,100px);
-    font-weight:normal;
-    color:#fff;
-    text-shadow:
-        0 0 10px #ff315d,
-        0 0 30px #ff315d,
-        0 0 60px #8e1635;
-}
-
-.subtitle{
-    margin-top:18px;
-    font-size:20px;
-    color:#e7d8df;
-    font-style:italic;
-}
-
-.enter{
-    display:inline-block;
-    margin-top:40px;
-    padding:14px 32px;
-    border:1px solid rgba(255,255,255,.35);
-    border-radius:50px;
-    color:white;
-    text-decoration:none;
-    background:rgba(255,255,255,.07);
-    backdrop-filter:blur(10px);
-    transition:.3s;
-}
-
-.enter:hover{
-    transform:scale(1.08);
-    background:rgba(255,50,90,.2);
-    box-shadow:0 0 30px rgba(255,40,90,.4);
-}
-
-/* MAIN */
-.main{
-    position:relative;
-    z-index:2;
-    padding:80px 20px;
-    max-width:1000px;
-    margin:auto;
-}
-
-/* PHOTO */
-.photo-section{
-    text-align:center;
-    margin-bottom:100px;
-}
-
-.photo-frame{
-    width:min(90vw,430px);
-    aspect-ratio:4/5;
-    margin:35px auto;
-    padding:9px;
-    border-radius:35px;
-    background:linear-gradient(135deg,#ff315d,#ffd2dc,#ff315d);
-    box-shadow:
-        0 0 25px rgba(255,40,90,.5),
-        0 0 80px rgba(255,20,80,.2);
-    animation:heartbeat 3s infinite ease-in-out;
-}
-
-.placeholder{
-    width:100%;
-    height:100%;
-    border-radius:27px;
-    background:
-        radial-gradient(circle at 50% 35%,#f3c5bd 0 9%,transparent 10%),
-        radial-gradient(ellipse at 50% 60%,#19141c 0 20%,transparent 21%),
-        linear-gradient(145deg,#35132c,#09070d);
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    flex-direction:column;
-    overflow:hidden;
-    position:relative;
-}
-
-.placeholder::before{
-    content:"";
-    width:110px;
-    height:110px;
-    border-radius:50%;
-    background:#e6b4ac;
-    position:absolute;
-    top:25%;
-}
-
-.placeholder::after{
-    content:"";
-    width:240px;
-    height:230px;
-    border-radius:50% 50% 10% 10%;
-    background:linear-gradient(135deg,#111,#33203a);
-    position:absolute;
-    bottom:-45px;
-}
-
-.placeholder-text{
-    position:relative;
-    z-index:3;
-    margin-top:280px;
-    font-size:14px;
-    letter-spacing:3px;
-    color:#ffd9e1;
-}
-
-@keyframes heartbeat{
-    0%,100%{transform:scale(1)}
-    50%{transform:scale(1.015)}
-}
-
-/* NAME */
-.name{
-    font-size:clamp(45px,10vw,90px);
-    letter-spacing:8px;
-    color:#fff;
-    text-shadow:
-        0 0 10px #ff315d,
-        0 0 35px #ff315d;
-}
-
-.crown{
-    font-size:25px;
-    display:block;
-    margin-bottom:10px;
-}
-
-.line{
-    width:100px;
-    height:2px;
-    margin:25px auto;
-    background:linear-gradient(90deg,transparent,#ff315d,transparent);
-}
-
-/* SHAYARI */
-.section-title{
-    text-align:center;
-    font-size:32px;
-    font-weight:normal;
-    margin-bottom:40px;
-    color:#ffe5eb;
-}
-
-.cards{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-    gap:20px;
-}
-
-.card{
-    padding:28px 22px;
-    min-height:150px;
-    border:1px solid rgba(255,255,255,.13);
-    border-radius:22px;
-    background:rgba(255,255,255,.055);
-    backdrop-filter:blur(14px);
-    box-shadow:0 10px 35px rgba(0,0,0,.3);
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    line-height:1.8;
-    color:#eadde2;
-    transition:.4s;
-}
-
-.card:hover{
-    transform:translateY(-8px);
-    border-color:rgba(255,70,110,.5);
-    box-shadow:0 0 30px rgba(255,30,80,.18);
-}
-
-.card span{
-    color:#ff426b;
-    font-size:22px;
-}
-
-/* FOOTER */
-footer{
-    text-align:center;
-    padding:80px 20px 40px;
-    color:#998d94;
-    font-size:13px;
-    letter-spacing:2px;
-}
-
-.footer-heart{
-    color:#ff315d;
-    font-size:22px;
-}
-
-/* ANIMATION */
-@keyframes fadeIn{
-    from{
-        opacity:0;
-        transform:translateY(25px);
-    }
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
-}
-
-/* MOBILE */
-@media(max-width:600px){
-    .main{
-        padding-top:50px;
-    }
-
-    .subtitle{
-        font-size:17px;
-    }
-
-    .cards{
-        grid-template-columns:1fr;
-    }
-
-    .photo-frame{
-        width:88vw;
-    }
-}
-</style>
-</head>
-
-<body>
-
-<!-- STARS -->
-<div class="stars">
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-</div>
-
-<!-- FLOATING HEARTS -->
-<div class="hearts">
-    <div class="heart">♥</div>
-    <div class="heart">♥</div>
-    <div class="heart">♥</div>
-    <div class="heart">♥</div>
-    <div class="heart">♥</div>
-</div>
-
-<!-- OPENING -->
-<section class="hero">
-
-    <div class="hero-box">
-
-        <div class="small">A LITTLE PIECE OF MY HEART</div>
-
-        <h1>WELCOME ❤️</h1>
-
-        <p class="subtitle">
-            This is not just a page...<br>
-            It's a little piece of my heart.
-        </p>
-
-        <a href="#main" class="enter">
-            Enter My World ♥
-        </a>
-
-    </div>
-
-</section>
-
-<!-- MAIN -->
-<main class="main" id="main">
-
-    <!-- PHOTO -->
-    <section class="photo-section">
-
-        <div class="small">A MOMENT TO REMEMBER</div>
-
-        <div class="photo-frame">
-
-            <div class="placeholder">
-
-                <div class="placeholder-text">
-                    YOUR PHOTO HERE ❤️
-                </div>
-
-            </div>
-
-        </div>
-
-        <div class="crown">♛</div>
-
-        <div class="name">PRADEEP</div>
-
-        <div class="line"></div>
-
-        <p class="subtitle">
-            Some moments become memories,<br>
-            and some memories become forever.
-        </p>
-
-    </section>
-
-
-    <!-- SHAYARI -->
-    <section>
-
-        <h2 class="section-title">
-            ✦ Dil Se Likhi Kuch Baatein ✦
-        </h2>
-
-        <div class="cards">
-
-            <div class="card">
-                Tumhare bina zindagi adhoori si lagti hai,
-                par tumhari yaadein har pal saath rehti hain. 
-                <span>♥</span>
-            </div>
-
-            <div class="card">
-                Kuch log sapne hote hain,
-                aur tum un sapno se bhi khoobsurat ho.
-                <span>♥</span>
-            </div>
-
-            <div class="card">
-                Dil se chaha hai tumhe,
-                aur har dua mein tumhara naam hai.
-                <span>♥</span>
-            </div>
-
-            <div class="card">
-                Dooriyan chahe kitni bhi ho,
-                tum mere dil ke sabse kareeb ho.
-                <span>♥</span>
-            </div>
-
-            <div class="card">
-                Teri muskaan hi meri khushi hai,
-                aur tera sochna hi meri aadat.
-                <span>♥</span>
-            </div>
-
-            <div class="card">
-                Zindagi mein kuch log sirf milte nahi,
-                zindagi ban jaate hain.
-                <span>♥</span>
-            </div>
-
-            <div class="card">
-                Tumse baat karna bhi ek sukoon hai,
-                jaise thak kar mann ko ghar mil gaya ho.
-                <span>♥</span>
-            </div>
-
-            <div class="card">
-                Na jaane kaisi ho tum,
-                par har roop mein bahut khaas ho.
-                <span>♥</span>
-            </div>
-
-            <div class="card">
-                Agar pyaar ek ehsaas hai,
-                to tum us ehsaas ka sabse khoobsurat hissa ho.
-                <span>♥</span>
-            </div>
-
-            <div class="card">
-                Bas itna hi kehna hai...
-                tum ho to sab kuch thoda aur khoobsurat lagta hai.
-                <span>♥</span>
-            </div>
-
-        </div>
-
-    </section>
-
-</main>
-
-<footer>
-
-    Made with <span class="footer-heart">♥</span><br><br>
-
-    PRADEEP
-
-</footer>
-
-</body>
-</html>
+    font-size:clamp(55px,10vw,130
+```
